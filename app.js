@@ -4,8 +4,12 @@
 //Yo necesito que cuando le des al botón se guarde el nombre en la lista 
 
 let amigos = [];
+
+
+
 function agregarAmigo() {
-  alert("¡Botón de agregar amigos funciona!");
+ let nombre = document.getElementById("amigo").value;
+ console.log(nombre);
 }
 
 
