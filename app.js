@@ -27,21 +27,36 @@ function mostrarListaAmigos() {
   // Limpiar la lista antes de agregar nuevos elementos
   lista.innerHTML = "";
 
-  // Recorrer el array amigos con forEach
+for (let i = 0; i < amigos.length; i++) {
+    let li = document.createElement("li"); // 👉 aquí debe ser "li" y no "listaAmigos"
+    li.textContent = amigos[i];            // el nombre en la posición i
+    lista.appendChild(li);                 // agregamos <li> al <ul>
+  
+
+  /* Recorrer el array amigos con forEach
   amigos.forEach(function (elemento, indice) {
     console.log(elemento, indice);
 
-    let li = document.createElement("li"); // Crear un <li> nuevo
+    //let li = document.createElement("li"); // Crear un <li> nuevo
     li.textContent = elemento;             // Poner el nombre dentro del <li>
     lista.appendChild(li);                 // Agregar el <li> al <ul>
-  });
+    */
+  }
 }
 
 
 function sortearAmigo() {
-  alert("¡Botón de sortear amigo funciona!");
 
+if ( amigos.length === 0){
+  alert ("No hay amigos en la lista para sortear 😅");
+  return;
+}
 
+let ramdomAmigo = Math.floor(Math.random() *amigos.length);
+let amigoSorteado = amigos[ramdomAmigo];
+
+ let resultado = document.getElementById("resultado");
+resultado.innerHTML = `🎉 Tu amigo secreto es: ${amigoSorteado}`
 }
 
 
