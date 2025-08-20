@@ -17,28 +17,26 @@ if(nombre){
     alert("Por favor ingresa un nombre válido");
   }
 
-mostrarlistaAmigos();
+mostrarListaAmigos();
 limpiarCampos();
 }
-/*
-function mostrarAlertaVacio() {
-if (nombre != ""){
- alert("Ingresa un nombre correctamente");
+
+function mostrarListaAmigos() {
+  let lista = document.getElementById("listaAmigos");
+
+  // Limpiar la lista antes de agregar nuevos elementos
+  lista.innerHTML = "";
+
+  // Recorrer el array amigos con forEach
+  amigos.forEach(function (elemento, indice) {
+    console.log(elemento, indice);
+
+    let li = document.createElement("li"); // Crear un <li> nuevo
+    li.textContent = elemento;             // Poner el nombre dentro del <li>
+    lista.appendChild(li);                 // Agregar el <li> al <ul>
+  });
 }
-}
-*/
 
-function mostrarlistaAmigos(agregarAmigo){
-    let lista = document.getElementById("listaAmigos");
-
-amigos.forEach(function (elemento, indice, array) {
-  console.log(elemento, indice);
-});
-// Manzana 0
-// Banana 1
-
-
-}
 
 function sortearAmigo() {
   alert("¡Botón de sortear amigo funciona!");
