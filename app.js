@@ -1,5 +1,4 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación.
-
+// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. 
 let amigos = [];
 
 function agregarAmigo() {
@@ -23,19 +22,23 @@ function mostrarListaAmigos() {
   lista.innerHTML = "";
 
 for (let i = 0; i < amigos.length; i++) {
-    let li = document.createElement("li"); // aquí debe ser "li" 
+    let li = document.createElement("li"); // aquí se crea el  "li" 
     li.textContent = amigos[i];            // el nombre en la posición i
     lista.appendChild(li);                 // agregamos <li> al <ul>
+  
+
   }
 }
-
 
 function sortearAmigo() {
 
 if ( amigos.length === 0){
   alert ("No hay amigos en la lista para sortear 😅");
   return;
-}
+} else if (amigos.length < 3) {
+    alert("Debes ingresar al menos 3 amigos para poder sortear 😅");
+    return;
+  }
 
 let ramdomAmigo = Math.floor(Math.random() *amigos.length);
 let amigoSorteado = amigos[ramdomAmigo];
