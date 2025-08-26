@@ -50,7 +50,10 @@ function sortearAmigo() {
 if ( amigos.length === 0){
   alert ("No hay amigos en la lista para sortear 😅");
   return;
-}
+} else if (amigos.length < 3) {
+    alert("Debes ingresar al menos 3 amigos para poder sortear 😅");
+    return;
+  }
 
 let ramdomAmigo = Math.floor(Math.random() *amigos.length);
 let amigoSorteado = amigos[ramdomAmigo];
