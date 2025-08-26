@@ -30,7 +30,6 @@ for (let i = 0; i < amigos.length; i++) {
   }
 }
 
-
 function sortearAmigo() {
 
 if ( amigos.length === 0){
